@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/scp.css' %}?{% now 'U' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div>
+            <form action="/register" method="post">
+                {% csrf_token %}
+                <h2>Registration</h2>
+                <div>
+                    <label for="username">First Name</label>
+                    <input type="text" name="first_name" id="first_name">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <label for="conf_password">Confirm PW</label>
+                    <input type="password" name="conf_password" id="conf_password">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+        <div>
+            <form action="/login" method="post">
+                {% csrf_token %}
+                <h2>Login</h2>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <input type="submit" value="Log In">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div>
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{message}}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

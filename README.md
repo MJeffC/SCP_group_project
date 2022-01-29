@@ -6,10 +6,10 @@ Our group project is named "Social Calendar Planner". The project will have a lo
 https://xd.adobe.com/view/a65d3cab-4184-4675-88b3-0d582186d902-f30e/
 
 ## Group Members:
-Niha A.
-Meghan S.
-Erik R.
-Mark Jeffrey C.
+- Niha A. (Front End Designer and Back-end support Programmer)
+- Meghan S. (Initial Project Designer and back-end programmer)
+- Erik R. (Back-end Programmer for multiple pages)
+- Mark Jeffrey C. (Initial Project Setup, Initial back-end Programmer and Initial database setup)
 
 ## Feature list:
 - Create Event(s) for anybody to View and RSVP
